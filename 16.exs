@@ -123,7 +123,7 @@ defmodule Aoc16 do
   defp rotate(d, :cw), do: %{?^ => ?>, ?> => ?v, ?v => ?<, ?< => ?^}[d]
   defp rotate(d, :ccw), do: %{?^ => ?<, ?< => ?v, ?v => ?>, ?> => ?^}[d]
 
-  defp parse_maze(input) do
+  def parse_maze(input) do
     by_type = input
     |> String.split("\n")
     |> Enum.with_index()

@@ -89,7 +89,7 @@ defmodule Aoc18 do
     restore_path({x1, y1, t - 1}, visited, [{x, y} | acc])
   end
 
-  defp neighborhood({x, y}), do: [{x + 1, y}, {x - 1, y}, {x, y + 1}, {x, y - 1}]
+  def neighborhood({x, y}), do: [{x + 1, y}, {x - 1, y}, {x, y + 1}, {x, y - 1}]
 
   defp find_max_bits(all_bits, rows, cols, lower_bound \\ 0)
   defp find_max_bits(_, _, _, nil), do: :err

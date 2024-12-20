@@ -74,7 +74,7 @@ defmodule Aoc8 do
     Map.update(acc, c, [p], fn pts -> [p | pts] end)
   end
 
-  defp pairs(list), do: pairs(list, [])
+  def pairs(list), do: pairs(list, [])
   defp pairs([], acc), do: acc
   defp pairs([_], acc), do: acc
   defp pairs([el | rest], acc), do: pairs(rest, acc ++ Enum.map(rest, &({el, &1}))) 
