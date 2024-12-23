@@ -203,8 +203,8 @@ defmodule Aoc21 do
   defp moves(), do: [?<, ?^, ?>, ?v, ?A]
   defp numbers(), do: Enum.concat(?0..?9, [?A])
 
-  defp product([list]), do: Enum.map(list, &([&1]))
-  defp product([list | rest]) do 
+  def product([list]), do: Enum.map(list, &([&1]))
+  def product([list | rest]) do 
     Enum.flat_map(product(rest), fn t -> Enum.map(list, &([&1 | t])) end)
   end
 end
